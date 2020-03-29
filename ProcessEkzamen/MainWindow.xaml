@@ -1,0 +1,104 @@
+﻿<Window x:Class="ProcessEkzamen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProcessEkzamen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="tbWords" HorizontalAlignment="Left" Height="23" Margin="144,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="209"/>
+        <Label Content="Enter Words" 
+               HorizontalAlignment="Left" 
+               Margin="10,13,0,0" 
+               VerticalAlignment="Top"
+               Height="38" Width="129"/>
+        <Button Content="Open File..."
+                HorizontalAlignment="Left" 
+                Margin="375,61,0,0" 
+                VerticalAlignment="Top" 
+                Width="98" Height="23" 
+                Click="Open_file_Click"/>
+        <TextBlock x:Name="tbFolder"
+                   Background="AliceBlue" 
+                   HorizontalAlignment="Left" 
+                   Margin="144,61,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="TextBlock" 
+                   VerticalAlignment="Top" 
+                   RenderTransformOrigin="0.211,0.642"
+                   Width="209" Height="19"/>
+        <Button Content="Open File..." 
+                HorizontalAlignment="Left" 
+                Margin="375,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="98" Height="23"/>
+        <Label Content="Choose folder from" 
+               HorizontalAlignment="Left" 
+               Margin="10,56,0,0"
+               VerticalAlignment="Top" 
+               Height="38" Width="129"/>
+        <Button Content="Start" 
+                HorizontalAlignment="Left"
+                Margin="91,163,0,0" 
+                VerticalAlignment="Top" 
+                Width="98" Height="23"
+                Click="Start_Click"/>
+        <ListBox x:Name="lbTest"
+                 HorizontalAlignment="Left"
+                 Height="100" 
+                 Margin="64,248,0,0" 
+                 VerticalAlignment="Top"
+                 Width="181" ItemsSource="{Binding}"/>
+        <ListBox x:Name="lbFilesWith"
+            HorizontalAlignment="Left"
+            Height="100" 
+            Margin="292,248,0,0" 
+            VerticalAlignment="Top"
+            Width="181" ItemsSource="{Binding}"/>
+        <Label Content="All files" 
+            HorizontalAlignment="Left" 
+            Margin="64,210,0,0"
+            VerticalAlignment="Top" 
+            Height="38" Width="89"/>
+        <Label Content="Files with words" 
+            HorizontalAlignment="Left" 
+            Margin="292,210,0,0"
+            VerticalAlignment="Top" 
+            Height="38" Width="89"/>
+        <Button Content="Stop" 
+            HorizontalAlignment="Left"
+            Margin="375,163,0,0" 
+            VerticalAlignment="Top" 
+            Width="98" Height="23"
+            Click="Start_Click"/>
+        <Button Content="Pause" 
+            HorizontalAlignment="Left"
+            Margin="230,163,0,0" 
+            VerticalAlignment="Top" 
+            Width="98" Height="23"
+            Click="Start_Click"/>
+        <Button Content="Open File..."
+            HorizontalAlignment="Left" 
+            Margin="375,104,0,0" 
+            VerticalAlignment="Top" 
+            Width="98" Height="23" 
+            Click="FolderCopy_Click"/>
+        <TextBlock x:Name="tbFolder_Copy"
+            Background="AliceBlue" 
+            HorizontalAlignment="Left" 
+            Margin="144,104,0,0" 
+            TextWrapping="Wrap" 
+            Text="TextBlock" 
+            VerticalAlignment="Top" 
+            RenderTransformOrigin="0.211,0.642"
+            Width="209" Height="19"/>
+        <Label Content="Choose folder to copy" 
+            HorizontalAlignment="Left" 
+            Margin="10,99,0,0"
+            VerticalAlignment="Top" 
+            Height="38" Width="129"/>
+
+
+    </Grid>
+</Window>
